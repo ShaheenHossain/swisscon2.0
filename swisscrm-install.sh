@@ -4,7 +4,7 @@ OE_HOME_EXT="/$OE_USER/${OE_USER}-server"
 INSTALL_WKHTMLTOPDF="True"
 
 OE_PORT="8061"
-# IMPORTANT! This script contains extra libraries that are specifically needed for Eagle 15.0
+# IMPORTANT! This script contains extra libraries that are specifically needed for SwissCRM 2.0
 OE_VERSION="master"
 
 
@@ -42,7 +42,7 @@ sudo apt-get upgrade -y
 echo -e "\n---- Install PostgreSQL Server ----"
 sudo apt-get install postgresql postgresql-server-dev-all -y
 
-echo -e "\n---- Creating the Eagle PostgreSQL User  ----"
+echo -e "\n---- Creating the SwissCRM PostgreSQL User  ----"
 sudo su - postgres -c "createuser -s $OE_USER" 2> /dev/null || true
 
 #--------------------------------------------------
