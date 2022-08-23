@@ -8,11 +8,11 @@ This script can be safely used in a Swisscrm code base server because the defaul
 <h3>Installation procedure</h3>
 
 
-sudo wget https://raw.githubusercontent.com/ShaheenHossain/swisscon2.0/swiss2061/swisscrm-install.sh
+sudo wget https://raw.githubusercontent.com/ShaheenHossain/swisscon2.0/swiss2062/swisscrm-swiss2062-install.sh
 
-sudo chmod +x swisscrm-install.sh
+sudo chmod +x swisscrm-swiss2062-install.sh
 
-sudo ./swisscrm-install.sh
+sudo ./swisscrm-swiss2062-install.sh
 
 
 
