@@ -28,7 +28,7 @@ sudo apt-get upgrade -y
 echo -e "\n---- Install PostgreSQL Server ----"
 sudo apt-get install postgresql postgresql-server-dev-all -y
 
-echo -e "\n---- Creating the EAGLE PostgreSQL User  ----"
+echo -e "\n---- Creating the SWISSCRM PostgreSQL User  ----"
 sudo su - postgres -c "createuser -s $OE_USER" 2> /dev/null || true
 
 #--------------------------------------------------
@@ -48,7 +48,7 @@ sudo npm install -g rtlcss
 # Install Wkhtmltopdf if needed
 #--------------------------------------------------
 if [ $INSTALL_WKHTMLTOPDF = "True" ]; then
-  echo -e "\n---- Install wkhtml and place shortcuts on correct place for EAGLE 13 ----"
+  echo -e "\n---- Install wkhtml and place shortcuts on correct place for SWISSCRM ----"
   #pick up correct one from x64 & x32 versions:
   if [ "`getconf LONG_BIT`" == "64" ];then
       _url=$WKHTMLTOX_X64
@@ -63,7 +63,7 @@ else
   echo "Wkhtmltopdf isn't installed due to the choice of the user!"
 fi
 
-echo -e "\n---- Create EAGLE system user ----"
+echo -e "\n---- Create SWISSCRM system user ----"
 sudo adduser --system --quiet --shell=/bin/bash --home=$OE_HOME --gecos 'SWISS2062' --group $OE_USER
 #The user should also be added to the sudo'ers group.
 sudo adduser $OE_USER sudo
@@ -73,9 +73,9 @@ sudo mkdir /var/log/$OE_USER
 sudo chown $OE_USER:$OE_USER /var/log/$OE_USER
 
 #--------------------------------------------------
-# Install EAGLE
+# Install SWISSCRM
 #--------------------------------------------------
-echo -e "\n==== Installing EAGLE Server ===="
+echo -e "\n==== Installing SWISSCRM Server ===="
 sudo git clone --depth 1 --branch $OE_VERSION https://github.com/ShaheenHossain/swisscon-2.0 $OE_HOME_EXT/
 
 echo -e "\n---- Create custom module directory ----"
@@ -105,7 +105,7 @@ sudo su root -c "echo 'sudo -u $OE_USER $OE_HOME_EXT/swiss-bin --config=/etc/${O
 sudo chmod 755 $OE_HOME_EXT/start.sh
 
 #--------------------------------------------------
-# Adding EAGLE as a deamon (initscript)
+# Adding SWISSCRM as a deamon (initscript)
 #--------------------------------------------------
 
 echo -e "* Create init file"
@@ -178,7 +178,7 @@ sudo mv ~/$OE_CONFIG /etc/init.d/$OE_CONFIG
 sudo chmod 755 /etc/init.d/$OE_CONFIG
 sudo chown root: /etc/init.d/$OE_CONFIG
 
-echo -e "* Start EAGLE on Startup"
+echo -e "* Start SWISSCRM on Startup"
 sudo update-rc.d $OE_CONFIG defaults
 
 echo -e "* Starting swiss ERP Service"
