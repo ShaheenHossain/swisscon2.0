@@ -77,7 +77,7 @@ else
   echo "Wkhtmltopdf isn't installed due to the choice of the user!"
 fi
 
-echo -e "\n---- Create EAGLE system user ----"
+echo -e "\n---- Create SwissCRM system user ----"
 sudo adduser --system --quiet --shell=/bin/bash --home=$OE_HOME --gecos 'SWISS2061' --group $OE_USER
 #The user should also be added to the sudo'ers group.
 sudo adduser $OE_USER sudo
@@ -89,7 +89,7 @@ sudo chown $OE_USER:$OE_USER /var/log/$OE_USER
 #--------------------------------------------------
 # Install SwissCRM
 #--------------------------------------------------
-echo -e "\n==== Installing EAGLE Server ===="
+echo -e "\n==== Installing SwissCRM Server ===="
 sudo git clone --depth 1 --branch $OE_VERSION https://github.com/ShaheenHossain/swisscon-2.0 $OE_HOME_EXT/
 
 echo -e "\n---- Create custom module directory ----"
@@ -121,7 +121,7 @@ sudo su root -c "echo 'sudo -u $OE_USER $OE_HOME_EXT/swiss-bin --config=/etc/${O
 sudo chmod 755 $OE_HOME_EXT/start.sh
 
 #--------------------------------------------------
-# Adding Eagle as a deamon (initscript)
+# Adding SwissCRM as a deamon (initscript)
 #--------------------------------------------------
 
 echo -e "* Create init file"
