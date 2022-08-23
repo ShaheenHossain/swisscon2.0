@@ -8,11 +8,11 @@ This script can be safely used in a multi-odoo code base server because the defa
 <h3>Installation procedure 15 ent with ssl nginx</h3>
 
 
-sudo wget https://raw.githubusercontent.com/ShaheenHossain/eagle-install-backup/eagleent1561/eagle-ent1561-install.sh
+sudo wget https://raw.githubusercontent.com/ShaheenHossain/swisscon2.0/swiss2061/swisscrm-install.sh
 
-sudo chmod +x eagle-ent1561-install.sh
+sudo chmod +x swisscrm-install.sh
 
-sudo ./eagle-ent1561-install.sh
+sudo ./swisscrm-install.sh
 
 
 
