@@ -8,11 +8,11 @@ This script can be safely used in a Swisscrm code base server because the defaul
 <h3>Installation procedure</h3>
 
 
-sudo wget https://raw.githubusercontent.com/ShaheenHossain/swisscon2.0/swiss2062/swisscrm-swiss2062-install.sh
+sudo wget https://raw.githubusercontent.com/ShaheenHossain/swisscon2.0/flectra2063/flectra-2063-install.sh
 
-sudo chmod +x swisscrm-swiss2062-install.sh
+sudo chmod +x flectra-2063-install.sh
 
-sudo ./swisscrm-swiss2062-install.sh
+sudo ./flectra-2063-install.sh
 
 
 
