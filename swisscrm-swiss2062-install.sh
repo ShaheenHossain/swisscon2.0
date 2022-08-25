@@ -10,8 +10,14 @@ OE_CONFIG="${OE_USER}-server"
 WEBSITE_NAME="_"
 LONGPOLLING_PORT="8072"
 
+
 WKHTMLTOX_X64=https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.trusty_amd64.deb
 WKHTMLTOX_X32=https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.trusty_i386.deb
+
+#if not working then install wkhtmaltopdf for ubuntu 20.04
+#wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.focal_amd64.deb
+#sudo apt install ./wkhtmltox_0.12.6-1.focal_amd64.deb
+
 #--------------------------------------------------
 # Update Server
 #--------------------------------------------------
