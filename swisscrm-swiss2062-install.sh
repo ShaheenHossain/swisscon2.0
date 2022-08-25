@@ -18,6 +18,9 @@ WKHTMLTOX_X32=https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.
 #wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.focal_amd64.deb
 #sudo apt install ./wkhtmltox_0.12.6-1.focal_amd64.deb
 
+# if showing this message N: Download is performed unsandboxed as root as file '/root/wkhtmltox_0.12.6-1.focal_amd64.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
+#sudo chown -R _apt:root /var/lib/apt/lists
+
 #--------------------------------------------------
 # Update Server
 #--------------------------------------------------
